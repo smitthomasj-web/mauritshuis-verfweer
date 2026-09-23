@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mauritshuis: Verfweer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="hud-crest">◆ Mauritshuis ◆</div>
+    <div id="title">Verfweer</div>
+    <div id="stats">
+      <span class="stat"><em>Score</em> <strong id="score">0</strong></span>
+      <span class="stat"><em>Leven</em> <strong id="hp">100</strong></span>
+      <span class="stat"><em>Uit</em> <strong id="kills">0</strong></span>
+      <span class="stat ammo"><em>Shotgun</em> <strong id="ammo">6/6</strong></span>
+    </div>
+  </div>
+
+  <!-- Fixed center crosshair (CoD style) -->
+  <div id="crosshair" aria-hidden="true">
+    <span class="ch-ring"></span>
+    <span class="ch-dot"></span>
+    <span class="ch-h"></span>
+    <span class="ch-v"></span>
+  </div>
+
+  <div id="aim-banner">Muis = kijken (werkt ook zonder pointer lock) · WASD = lopen · Linksklik = schieten · RMB = richten</div>
+
+  <div id="click-to-play" class="hidden">Klik om verder te spelen</div>
+
+  <div id="control-tips" class="hidden">
+    <p class="tip-main"><kbd>Muis</kbd> kijken (ook zonder pointer lock) · <kbd>Linksklik</kbd> schieten · <kbd>RMB</kbd> richten (ADS)</p>
+    <p><kbd>WASD</kbd> lopen · <kbd>Shift</kbd> sprint · <kbd>Spatie</kbd> springen · <kbd>R</kbd> herladen</p>
+    <p><kbd>F</kbd> middelvinger · <kbd>Esc</kbd> pauze</p>
+    <p class="tip-hint">Protestanten op het plein — schiet, of ga naar binnen!</p>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <div class="panel">
+      <div class="crest">◆ ◆ ◆</div>
+      <h1>Mauritshuis: Verfweer</h1>
+      <p class="subtitle">Den Haag — FPS museum shooter</p>
+      <p>Je staat op het plein vóór het Mauritshuis. Ga naar binnen en bescherm de zalen tegen verfgooiende protestanten.</p>
+      <ul class="controls">
+        <li><kbd>Muis</kbd> kijken (werkt ook zonder pointer lock) · <kbd>Linksklik</kbd> shotgun</li>
+        <li><kbd>WASD</kbd> bewegen · <kbd>Shift</kbd> sprint · <kbd>Spatie</kbd> springen</li>
+        <li><kbd>Rechtermuis</kbd> richten (ADS) · <kbd>R</kbd> herladen</li>
+        <li><kbd>F</kbd> middelvinger (stun + Davidsster-ring)</li>
+        <li><kbd>Esc</kbd> pauze</li>
+      </ul>
+      <p class="big-tip">Call of Duty-stijl — Start → mikken met muis (center crosshair) → overleef het plein</p>
+      <button id="start-btn" type="button">Start spel</button>
+      <p id="end-msg" class="end-msg hidden"></p>
+      <button id="restart-btn" type="button" class="hidden">Opnieuw</button>
+    </div>
+  </div>
+
+  <div id="damage-flash"></div>
+  <div id="hit-marker"></div>
+
+  <div id="vignette"></div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
